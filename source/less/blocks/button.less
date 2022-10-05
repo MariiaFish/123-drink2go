@@ -1,0 +1,108 @@
+.button {
+  display: block;
+  padding: 0;
+  width: 113px;
+
+  background-color: @base-white;
+  border-radius: 4px;
+  font-size: 16px;
+  color: @base-primary;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: @primary-lighter;
+}
+
+.button:active {
+  background-color: @primary-darker;
+}
+
+.button.disabled {
+  background-color: @base-grey;
+}
+
+.button_navigation-user {
+  width: 60px;
+  min-height: 60px;
+  background-color: transparent;
+}
+
+.button_order {
+  width: 113px;
+  padding: 8px 20px 8px 20px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+.button_ordinary {
+  border-radius: 4px;
+  color: @base-white;
+  background-color: @base-primary;
+}
+
+.button_catalog-filter {
+  width: 160px;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.button_catalog-filter:hover,
+.button_catalog-filter:focus,
+.button_catalog-filter:active {
+  color: @base-white;
+}
+
+.button_catalog-filter.disabled {
+  background-color: @light-grey;
+}
+
+.button_reset {
+  font-size: 14px;
+}
+
+.button_slider-control {
+  width: 20px;
+  min-height: 656px;
+  z-index: 5;
+}
+
+.button_order-car {
+  width: 141px;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 8px 20px 8px 46px;
+  background-image: url("../../img/car-order.svg");
+  background-repeat: no-repeat;
+  background-position: 20px 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .navigation-user__button {
+    min-height: 80px;
+  }
+
+  .button_submit {
+    width: 147px;
+  }
+
+  .button_reset {
+    width: 138px;
+  }
+
+  .button_catalog-filter {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button_navigation-user {
+    width: 112px;
+  }
+
+  .button_submit {
+    width: 151px;
+  }
+}

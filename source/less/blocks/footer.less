@@ -1,0 +1,144 @@
+.footer {
+  background-color: @base-white;
+}
+
+.footer__upper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 0;
+}
+
+.footer__logo-span {
+  display: none;
+}
+
+.footer__container-middle {
+  padding-top: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid @base-secomdary;
+}
+
+.footer__social-list {
+  display: flex;
+  align-items: center;
+}
+
+.footer__list-item {
+  padding: 8px 0;
+}
+
+.footer__contacts-item {
+  position: relative;
+  padding-left: 19px;
+}
+
+.footer__address::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../img/address-pin.svg");
+  background-repeat: no-repeat;
+  width: 13px;
+  height: 16px;
+  top: 2px;
+  left: 0;
+}
+
+.footer__phone::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../img/phone.svg");
+  background-repeat: no-repeat;
+  width: 13px;
+  height: 16px;
+  top: 2px;
+  left: 0;
+}
+
+.footer__contacts-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.footer__social-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.footer__copiraight-container {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: @tablet-width) {
+  .footer__upper {
+    padding-top: 42px;
+    padding-bottom: 32px;
+  }
+
+  .footer__container-middle {
+    border: none;
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+
+  .footer__middle .page__body-container {
+    margin: 0;
+    width: 100%;
+  }
+
+  .footer__middle {
+    width: 728px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 223px);
+    column-gap: 30px;
+  }
+
+  .footer__copiraight {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer {
+    width: 1360px;
+    margin: 0 auto;
+  }
+
+  .footer .page__body-container {
+    width: 318px;
+  }
+
+  .footer__container {
+    display: flex;
+    padding-top: 40px;
+  }
+
+  .footer__upper {
+    padding: 0;
+    width: 318px;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 39px;
+    justify-content: flex-start;
+  }
+
+  .footer__middle {
+    margin: 0;
+    padding-top: 9px;
+    width: 1040px;
+    grid-template-columns: repeat(3, 317px);
+  }
+
+  .footer__logo-span {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .footer__social-list {
+    margin-top: 57px;
+  }
+
+  .footer__copiraight {
+    margin-top: 22px;
+  }
+}

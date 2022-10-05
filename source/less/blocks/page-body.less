@@ -1,0 +1,25 @@
+.page__body {
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: @base-black;
+  font-weight: 400;
+  background-color: @base-white;
+  min-height: 100%;
+}
+
+.page__body-container {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page__body-container {
+    width: 728px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page__body-container {
+    width: 1360px;
+  }
+}
