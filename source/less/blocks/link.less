@@ -4,8 +4,6 @@
 }
 
 .link_catalog-products {
-  display: flex;
-  flex-direction: column;
   color: @base-black;
 }
 
@@ -22,26 +20,53 @@
   border-radius: 4px;
 }
 
+.link_pagination:hover,
+.link_pagination:focus {
+  background-color: @primary-lighter;
+  color: @base-white;
+}
+
+.link_pagination:active {
+  background-color: @primary-darker;
+  color: @base-white;
+}
+
+.link_pagination:hover .catalog-products__pagination-icon,
+.link_pagination:focus .catalog-products__pagination-icon,
+.link_pagination:active .catalog-products__pagination-icon,
+.link_pagination.disabled .catalog-products__pagination-icon {
+  fill: @base-white;
+}
+
+.link_pagination.disabled {
+  background-color: @light-grey;
+  color: @base-white;
+}
+
 .link_pagination-current {
   font-weight: 600;
   color: @base-black;
   background-color: transparent;
 }
 
-.link_pagination-previous {
-  background-image: url("../../img/pagination-arrow-previous.svg");
-  background-repeat: no-repeat;
-  background-position: 15px 16px;
-}
-
-.link_pagination-next {
-  background-image: url("../../img/pagination-arrow-next.svg");
-  background-repeat: no-repeat;
-  background-position: 17px 16px;
-}
-
 .link_social-item {
+  display: block;
   padding: 10px;
+  border-radius: 4px;
+}
+
+.link_social-item:hover,
+.link_social-item:focus {
+  background-color: @base-secondary;
+}
+
+.link_social-item:hover .footer__icon,
+.link_social-item:focus .footer__icon {
+  fill: @base-primary;
+}
+
+.link_social-item:active {
+  background-color: @base-primary-hover;
 }
 
 .link_footer {
@@ -59,15 +84,40 @@
   color: @base-black;
 }
 
+.link_copiright {
+  cursor: pointer;
+}
+
+.link_copiright:hover .footer__icon,
+.link_copiright:focus .footer__icon {
+  fill: @base-primary;
+}
+
+.link_copiright:active .footer__icon {
+  fill: @primary-darker;
+}
+
 .link_copiright-text {
   margin-right: 4px;
 }
 
+.link_copiright-text:hover,
+.link_copiright-text:focus {
+  color: @base-primary;
+}
+
+.link_copiright-text:active {
+  color: @primary-darker;
+}
+
 @media (min-width: @tablet-width) {
+  .link_pagination .catalog-products__pagination-icon {
+    display: none;
+  }
+
   .link_pagination-previous,
   .link_pagination-next {
-    width: 150px;
-    background-image: none;
+    width: 91px;
   }
 }
 
@@ -78,5 +128,10 @@
 
   .link_logo-header {
     margin-right: 20px;
+  }
+
+  .link_pagination-previous,
+  .link_pagination-next {
+    width: 150px;
   }
 }

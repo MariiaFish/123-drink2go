@@ -1,5 +1,5 @@
 const slider = document.querySelector(".slider__container");
-const rangeSlider = document.querySelector(".catalog__filter-range-slider");
+const rangeSlider = document.querySelector(".catalog-filters__range-slider");
 
 // Инициализируем range-слайдер
 noUiSlider.create(rangeSlider, {
@@ -18,6 +18,7 @@ new Swiper(slider, {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+    speed: 1000,
   },
   pagination: {
     el: ".swiper-pagination",
@@ -62,18 +63,18 @@ const marker = L.marker(
 
 marker.addTo(map);
 
-const navMain = document.querySelector(".main-nav");
-const navToggle = document.querySelector(".main-nav__toggle");
+const navMain = document.querySelector(".navigation_main");
+const navToggle = document.querySelector(".navigation__toggle");
 
-navMain.classList.remove("main-nav--nojs");
+navMain.classList.remove("navigation_main--nojs");
 
 navToggle.addEventListener("click", function () {
-  if (navMain.classList.contains("main-nav--closed")) {
-    navMain.classList.remove("main-nav--closed");
-    navMain.classList.add("main-nav--opened");
+  if (navMain.classList.contains("navigation_main--closed")) {
+    navMain.classList.remove("navigation_main--closed");
+    navMain.classList.add("navigation_main--opened");
   } else {
-    navMain.classList.add("main-nav--closed");
-    navMain.classList.remove("main-nav--opened");
+    navMain.classList.add("navigation_main--closed");
+    navMain.classList.remove("navigation_main--opened");
   }
 });
 

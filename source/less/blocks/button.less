@@ -24,10 +24,38 @@
   background-color: @base-grey;
 }
 
+.buttom_reset.disabled {
+  background-color: @light-grey;
+  color: @base-white;
+}
+
 .button_navigation-user {
   width: 60px;
   min-height: 60px;
   background-color: transparent;
+  border-radius: 0;
+}
+
+.button_navigation-user:hover,
+.button_navigation-user:focus {
+  background-color: @base-white;
+}
+
+.button_navigation-user .navigation-user__icon {
+  fill: @base-black;
+}
+
+.button_toggle-navigation {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 0;
+  top: 0;
+  right: 0;
+}
+
+.button_toggle-navigation:active {
+  background-color: @base-primary-hover;
 }
 
 .button_order {
@@ -43,19 +71,29 @@
   background-color: @base-primary;
 }
 
-.button_catalog-filter {
+.button_catalog-filters {
   width: 160px;
   font-size: 13px;
   line-height: 24px;
 }
 
-.button_catalog-filter:hover,
-.button_catalog-filter:focus,
-.button_catalog-filter:active {
+.button_catalog-filters:hover,
+.button_catalog-filters:focus,
+.button_catalog-filters:active {
   color: @base-white;
 }
 
-.button_catalog-filter.disabled {
+
+.button_navigation-user:hover .navigation-user__button-span,
+.button_navigation-user:focus .navigation-user__button-span {
+  color: @base-primary;
+}
+
+.button_navigation-user:active {
+  background-color: @base-secondary;
+}
+
+.button_catalog-filters.disabled {
   background-color: @light-grey;
 }
 
@@ -84,6 +122,10 @@
     min-height: 80px;
   }
 
+  .button_toggle-navigation {
+    display: none;
+  }
+
   .button_submit {
     width: 147px;
   }
@@ -92,14 +134,30 @@
     width: 138px;
   }
 
-  .button_catalog-filter {
+  .button_catalog-filters {
     font-size: 14px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .button_navigation-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 112px;
+  }
+
+  .button_navigation-user:hover .navigation-user__icon,
+  .button_navigation-user:focus .navigation-user__icon {
+    fill: @base-primary;
+  }
+
+  .button_toggle-navigation {
+    display: none;
+  }
+
+  .button_car {
+    width: 129px;
   }
 
   .button_submit {

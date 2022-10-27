@@ -1,0 +1,509 @@
+.catalog-filters {
+  padding-top: 50px;
+  padding-bottom: 36px;
+}
+
+.catalog-filters__form {
+  margin-top: 20px;
+}
+
+.catalog-filters__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog__legend {
+  margin-bottom: 22px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.catalog-filters__input {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+}
+
+.catalog-filters__span {
+  font-weight: 400;
+}
+
+// Стили для фильтра цены
+.catalog-filters__price-fildset {
+  padding-bottom: 24px;
+  width: 280px;
+}
+
+.catalog-filters__price-legend {
+  margin-bottom: 34px;
+}
+
+.catalog-filters__price-input {
+  min-height: 38px;
+  padding: 6px 34px;
+  border: 2px solid @primary-lighter;
+  border-radius: 4px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.catalog-filters__price-input::-webkit-outer-spin-button,
+.catalog-filters__price-input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.catalog-filters__price-input::placeholder {
+  text-align: center;
+  color: @light-grey;
+}
+
+// Стили для фильтра цены (input) в сотоянии focus-visible и focus
+.catalog-filters__price-input:focus-visible,
+.catalog-filters__price-input:focus {
+  outline: 0;
+  border: 2px solid @primary-darker;
+}
+
+// Стили для фильтра цены (input) в сотоянии disabled
+.catalog-filters__price-input:disabled {
+  border: 2px solid @light-grey;
+  color: @light-grey;
+}
+
+.catalog-filters__range-slider {
+  margin-bottom: 35px;
+}
+
+.catalog-filters__range-slider.noUi-target {
+  background-color: @light-grey;
+  border: none;
+  border-radius: 0;
+  height: 2px;
+}
+
+.catalog-filters__range-slider .noUi-connects {
+  height: 4px;
+}
+
+.catalog-filters__range-slider .noUi-connect {
+  background-color: @primary-lighter;
+  height: 4px;
+}
+
+.catalog-filters__range-slider .noUi-handle-lower,
+.catalog-filters__range-slider .noUi-handle-upper {
+  width: 24px;
+  height: 24px;
+  border: 2px solid @primary-lighter;
+  border-radius: 100px;
+  background-color: @base-white;
+  top: -10px;
+}
+
+.catalog-filters__range-slider .noUi-handle-lower {
+  position: relative;
+  cursor: pointer;
+  left: 27px;
+}
+
+.catalog-filters__range-slider .noUi-handle-upper {
+  position: relative;
+  cursor: pointer;
+  right: -8px;
+}
+
+.catalog-filters__range-slider .noUi-handle::after,
+.catalog-filters__range-slider .noUi-handle::before {
+  display: none;
+}
+
+.catalog-filters__price-inputs {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.catalog-filters__price-label:first-child::after {
+  position: absolute;
+  content: "";
+  width: 9px;
+  height: 2px;
+  background-color: @base-grey;
+  top: 17px;
+  left: 135px;
+}
+
+// Стили для состояния hover&focus у фильтра цены (range-slider)
+.catalog-filters__range-slider .noUi-handle:hover .noUi-touch-area::after,
+.catalog-filters__range-slider .noUi-handle:focus .noUi-touch-area::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  top: 2px;
+  left: 2px;
+  background-color: @base-primary-hover;
+}
+
+// Стили для состояния active у фильтра цены (range-slider)
+.catalog-filters__range-slider .noUi-handle:active .noUi-touch-area::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  top: 2px;
+  left: 2px;
+  background-color: @base-primary;
+}
+
+.catalog-filters__range-slider .noUi-handle:active {
+  border: 2px solid @base-primary;
+}
+
+// Стили для состояния disabled у фильтра цены (range-slider)
+.catalog-filters__range-slider.disabled > .noUi-base {
+  & .noUi-connect {
+    background-color: @base-grey;
+  }
+
+  & > .noUi-origin .noUi-handle-lower,
+  & > .noUi-origin .noUi-handle-upper {
+    border: 2px solid @base-grey;
+  }
+
+  & > .noUi-origin .noUi-handle .noUi-touch-area::after {
+    display: none;
+  }
+}
+
+// Стили для фильтра молока
+.catalog-filters__milk-list {
+  padding-left: 34px;
+}
+
+.catalog-filters__milk-item {
+  padding-bottom: 21px;
+}
+
+.catalog-filters__milk-label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+// Стили для radio-buttons у фильтра молока
+.catalog-filters__radio-mark::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 100px;
+  border: 2px solid @base-grey;
+  left: -34px;
+  top: -3px;
+}
+
+.catalog-filters__radio-input {
+  width: 24px;
+  height: 24px;
+  left: -34px;
+  top: -3px;
+}
+
+.catalog-filters__radio-checked-icon {
+  display: none;
+}
+
+.catalog-filters__radio-hover-icon {
+  display: none;
+}
+
+.catalog-filters__radio-disabled-checked-icon {
+  display: none;
+}
+
+// Стили для radio-input в состоянии hover&focus
+.catalog-filters__radio-input:hover ~ .catalog-filters__radio-hover-icon,
+.catalog-filters__radio-input:focus ~ .catalog-filters__radio-hover-icon,
+.catalog-filters__radio-input:checked:hover ~ .catalog-filters__radio-hover-icon {
+  display: block;
+  position: absolute;
+  left: -34px;
+  top: -3px;
+}
+
+// Стили для radio-input в состоянии checked
+.catalog-filters__radio-input:checked ~ .catalog-filters__radio-hover-icon {
+  display: none;
+}
+
+.catalog-filters__radio-input:checked ~ .catalog-filters__radio-checked-icon {
+  display: block;
+  position: absolute;
+  left: -34px;
+  top: -3px;
+}
+
+// Стили для radio-input в состоянии disabled
+.catalog-filters__radio-input:disabled ~ .catalog-filters__radio-mark::before {
+  border: 2px solid @light-grey;
+}
+
+.catalog-filters__radio-input:disabled ~ .catalog-filters__span {
+  color: @light-grey;
+}
+
+.catalog-filters__radio-input:disabled:hover ~ .catalog-filters__radio-hover-icon {
+  display: none;
+}
+
+.catalog-filters__radio-input:checked:disabled ~ .catalog-filters__radio-disabled-checked-icon {
+  display: block;
+  position: absolute;
+  left: -34px;
+  top: -3px;
+  fill: @base-white;
+}
+
+// Стили для фильтра страна-производителя
+.catalog-filters__origin-country-fildset {
+  padding-bottom: 14px;
+}
+
+.catalog-filter__origin-country-list {
+  padding-left: 51px;
+}
+
+.catalog-filters__country-item {
+  padding-bottom: 20px;
+}
+
+// Стили у checkbox-buttons у фильтра страна-производителя
+.catalog-filters__checkbox-input {
+  width: 42px;
+  height: 24px;
+  left: -52px;
+  top: -3px;
+}
+
+.catalog-filters__origin-country-label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.catalog-filters__checkbox-mark {
+  position: absolute;
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: @base-grey;
+  left: -52px;
+  top: -3px;
+}
+
+.catalog-filters__checkbox-toggle-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: @base-white;
+  left: -50px;
+  top: -1px;
+}
+
+.catalog-filters__buttons {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 45px);
+  row-gap: 26px;
+  justify-content: center;
+}
+
+// Стили для checkbox-input-toggle в состоянии hover&focus
+.catalog-filters__checkbox-input:hover + .catalog-filters__checkbox-mark,
+.catalog-filters__checkbox-input:focus + .catalog-filters__checkbox-mark,
+.catalog-filters__checkbox-input:checked:hover + .catalog-filters__checkbox-mark {
+  background-color: @base-primary-hover;
+  border: 2px solid @primary-lighter;
+}
+
+// Стили для checkbox-input-toggle в состоянии checked
+.catalog-filters__checkbox-input:checked + .catalog-filters__checkbox-mark {
+  background-color: @base-primary;
+  border: none;
+}
+
+.catalog-filters__checkbox-input:checked ~ .catalog-filters__checkbox-toggle-mark {
+  transform: translateX(18px);
+}
+
+// Стили для checkbox-input-toggle в состоянии unchecked
+.catalog-filters__checkbox-input:not(:checked) + .catalog-filters__checkbox-mark {
+  background-color: @base-grey;
+  border: none;
+}
+
+// Стили для checkbox-input-toggle в состоянии disabled
+.catalog-filters__checkbox-input:disabled + .catalog-filters__checkbox-mark {
+  background-color: @light-grey;
+}
+
+.catalog-filters__checkbox-input:disabled ~ .catalog-filters__span {
+  color: @light-grey;
+}
+
+.catalog-filters__checkbox-input:disabled:hover + .catalog-filters__checkbox-mark {
+  background-color: @light-grey;
+  border: none;
+}
+
+.catalog-filters__checkbox-input:checked:disabled ~ .catalog-filters__checkbox-toggle-mark {
+  background-color: @base-grey;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-filters {
+    padding-top: 80px;
+    padding-bottom: 44px;
+  }
+
+  .catalog-filters__form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  // Стили для фильтра цены в tablet-width
+  .catalog-filters__price-fildset {
+    margin-right: 28px;
+    width: 220px;
+    padding-bottom: 0;
+  }
+
+  .catalog-filters__price-legend {
+    margin-bottom: 29px;
+  }
+
+  // Стили для range-slider у фильтра цены в tablet-width
+  .catalog-filters__range-slider.noUi-target {
+    margin-left: 7px;
+  }
+
+  .catalog-filters__price-inputs {
+    margin-left: 7px;
+    width: 100%;
+  }
+
+  .catalog-filters__price-input {
+    padding: 6px 21px;
+  }
+
+  .catalog-filters__range-slider .noUi-handle-lower {
+    left: 20px;
+  }
+
+  .catalog-filters__price-label:first-child::after {
+    top: 18px;
+    left: 105px;
+  }
+
+  // Стили для фильтра молока в tablet-width
+  .catalog-filters__milk-fildset {
+    margin-right: 39px;
+  }
+
+  .catalog-filters__milk-item {
+    padding-bottom: 20px;
+  }
+
+  // Стили для фильтра страны производителя в tablet-width
+  .catalog-filters__origin-country-fildset {
+    padding-bottom: 0;
+    margin-right: 34px;
+  }
+
+  .catalog-filters__buttons {
+    grid-template-columns: repeat(2, 145px);
+    grid-template-rows: none;
+    column-gap: 30px;
+    margin-top: 38px;
+    margin-right: 47px;
+  }
+
+  .catalog-filters__button {
+    min-height: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-filters {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .catalog-filters__container {
+    display: flex;
+  }
+
+  .catalog-filters__form {
+    flex-direction: column;
+    width: 318px;
+    margin-right: 30px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  // Стили для фильтра цены в desktop-width
+  .catalog-filters__price-fildset {
+    margin-right: 0;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  // Стили для range-slider у фильтра цены в desktop-width
+  .catalog-filters__price-inputs {
+    margin-left: 0;
+  }
+
+  .catalog-filters__range-slider .noUi-handle-lower {
+    left: 23px;
+  }
+
+  .catalog-filters__range-slider .noUi-handle-upper {
+    left: 17px;
+  }
+
+  .catalog-filters__price-input {
+    padding: 6px 42px;
+  }
+
+  .catalog-filters__price-label:first-child::after {
+    left: 154px;
+  }
+
+  // Стили для фильтра молока в desktop-width
+  .catalog-filters__milk-fildset {
+    margin-right: 0;
+    margin-bottom: 9px;
+  }
+
+  // Стили для фильтра страны производителя в desktop-width
+  .catalog-filters__origin-country-fildset {
+    margin-bottom: 19px;
+    margin-right: 0;
+  }
+
+  .catalog__filter-origin-country-legend {
+    margin-bottom: 20px;
+  }
+
+  .catalog-filters__buttons {
+    margin: 0;
+  }
+}

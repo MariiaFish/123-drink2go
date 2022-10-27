@@ -8,38 +8,38 @@
   flex-wrap: wrap;
 }
 
-.navigation-user__button_log-in::after {
-  position: absolute;
-  content: "";
-  background-image: url("../../img/log-in.svg");
-  background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
-  top: 22px;
-  right: 22px;
-}
+// .navigation-user__button_log-in::after {
+//   position: absolute;
+//   content: "";
+//   background-image: url("../../img/log-in.svg");
+//   background-repeat: no-repeat;
+//   width: 16px;
+//   height: 16px;
+//   top: 22px;
+//   right: 22px;
+// }
 
-.navigation-user__button_car::after {
-  position: absolute;
-  content: "";
-  background-image: url("../../img/car.svg");
-  background-repeat: no-repeat;
-  width: 16px;
-  height: 16px;
-  top: 22px;
-  right: 22px;
-}
+// .navigation-user__button_car::after {
+//   position: absolute;
+//   content: "";
+//   background-image: url("../../img/car.svg");
+//   background-repeat: no-repeat;
+//   width: 16px;
+//   height: 16px;
+//   top: 22px;
+//   right: 22px;
+// }
 
 .navigation-user__button-span {
   display: none;
 }
 
-@media (min-width: @tablet-width) {
-  .navigation-user__button_log-in::after,
-  .navigation-user__button_car::after {
-    top: 32px;
-  }
-}
+// @media (min-width: @tablet-width) {
+//   .navigation-user__button_log-in::after,
+//   .navigation-user__button_car::after {
+//     top: 32px;
+//   }
+// }
 
 @media (min-width: @desktop-width) {
   .navigation-user__button-span {
@@ -47,6 +47,7 @@
     font-size: 12px;
     line-height: 16px;
     font-weight: 500;
+    color: @base-black;
     text-transform: uppercase;
   }
 
@@ -59,8 +60,12 @@
     width: 129px;
   }
 
-  .navigation-user__button_log-in::after,
-  .navigation-user__button_car::after {
-    left: 0;
+  .navigation-user__icon {
+    margin-right: 8px;
   }
+
+  // .navigation-user__button_log-in::after,
+  // .navigation-user__button_car::after {
+  //   left: 0;
+  // }
 }

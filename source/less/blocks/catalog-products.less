@@ -1,0 +1,171 @@
+.catalog-products {
+  padding-bottom: 44px;
+  background-color: @bg-lightest-grey;
+}
+
+//Стили для сортировки
+.catalog-products__sort {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.catalog-products__sort-fieldset {
+  width: 100%;
+}
+
+.catalog-products__sort-legend {
+  margin-bottom: 0;
+}
+
+.catalog-products__sort-select {
+  width: 165px;
+  padding: 4px 30px 4px 10px;
+  border: none;
+  background-color: transparent;
+  appearance: none;
+  background-image: url("../../img/sort-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 145px 13px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.catalog-products__sort-select:hover,
+.catalog-products__sort-select:focus {
+  background-color: @base-primary-hover;
+}
+
+.catalog-products__sort-select:focus-visible {
+  outline: none;
+}
+
+.catalog-products__sort-select .catalog-products__sort-option {
+  background-color: @base-white;
+  border-radius: 4px;
+  color: @base-black;
+}
+
+.catalog-products__sort-container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 3px;
+  align-items: center;
+}
+
+.catalog-products__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Стили для каталога продукции
+.catalog-products__item {
+  padding: 40px 20px 20px 20px;
+  margin-bottom: 20px;
+  background-color: @base-white;
+  border-radius: 4px;
+}
+
+.catalog-products__picture {
+  display: flex;
+}
+
+.catalog-products__order-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+// Стили для пагинации
+.catalog-products__pagination-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+// Стили дял скрытия контролов вперед и назад, в случае если открыта первая или последняя страницы
+.catalog-products__pagination-item_last-page,
+.catalog-products__pagination-item_first-page {
+  z-index: -1;
+}
+
+.catalog-products__pagination-icon {
+  fill: @base-primary;
+}
+
+.catalog-products__pagination-span {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-products {
+    padding-bottom: 90px;
+  }
+
+  //Стили для сортировки в tablet-width
+  .catalog-products__sort {
+    margin-bottom: 30px;
+  }
+
+  .catalog-products__sort-container {
+    justify-content: end;
+    margin-left: 0;
+  }
+
+  .catalog-products__sort-legend {
+    margin-right: 20px;
+  }
+
+  //Стили для каталога продукции в tablet-width
+  .catalog-products__list {
+    display: grid;
+    grid-template-columns: repeat(2, 350px);
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+
+  .catalog-products__item {
+    margin-bottom: 0;
+    padding: 50px 30px 30px 30px;
+  }
+
+  .catalog-products__order-container {
+    margin-top: 20px;
+  }
+
+  // Стили для пагинации в tablet-width
+  .catalog-products__pagination {
+    display: flex;
+    justify-content: end;
+  }
+
+  .catalog-products__pagination-list {
+    padding-top: 70px;
+  }
+
+  .catalog-products__pagination-span {
+    display: block;
+  }
+
+  .catalog-products__pagination-item:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-products {
+    padding-bottom: 120px;
+  }
+
+  // Стили для каталога продукции
+  .catalog-products__list {
+    grid-template-columns: repeat(3, 317px);
+  }
+
+  // Стили для пагинации в desktop-width
+  .catalog-products__pagination-list {
+    padding-top: 60px;
+  }
+}
