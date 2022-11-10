@@ -11,7 +11,7 @@
 .navigation_main--opened .navigation__toggle::after {
   position: absolute;
   content: "";
-  background-image: url("../../img/menu-close.svg");
+  background-image: url("../img/menu-close.svg");
   background-repeat: no-repeat;
   width: 16px;
   height: 12px;
@@ -23,7 +23,7 @@
 .navigation_main--closed .navigation__toggle::after {
   position: absolute;
   content: "";
-  background-image: url("../../img/menu-burger.svg");
+  background-image: url("../img/menu-burger.svg");
   background-repeat: no-repeat;
   width: 16px;
   height: 12px;
@@ -41,9 +41,9 @@
   display: none;
 }
 
-.navigation_main--nojs .navigation__list {
-  display: block;
-}
+// .navigation_main--nojs .navigation__list {
+//   display: block;
+// }
 
 .navigation__list.navigation__list--opened {
   display: block;
@@ -96,12 +96,20 @@
   background-color: @base-primary-hover;
 }
 
+.navigation-user {
+  padding-right: 39px;
+}
+
+.navigation-user--nojs {
+  padding-right: 0;
+}
+
 @media (min-width: @tablet-width) {
   .navigation__toggle {
     display: none;
   }
 
-  .navigation__list {
+  .navigation_main--closed .navigation__list {
     display: flex;
     flex-wrap: wrap;
     position: absolute;
@@ -123,7 +131,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .navigation__list {
+  .navigation_main--closed .navigation__list {
     width: 460px;
     left: 52%;
   }
